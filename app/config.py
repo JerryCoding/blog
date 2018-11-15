@@ -21,14 +21,8 @@ class Config:
     # 上传文件
     MAX_CONTENT_LENGTH = 8 * 1024 * 1024
     UPLOADED_PHOTOS_DEST = os.path.join(base_dir, 'static/upload')
-    # celery
-    CELERY_BROKER_URL = 'redis://localhost:6379/0'
-    CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
-
-    # 初始化函数，完成特定环境的初始化
-    @staticmethod
-    def init_app(app):
-        pass
+    # 后台汉化
+    BABEL_DEFAULT_LOCALE = 'zh_hans_CN'
 
 
 # 开发环境配置
