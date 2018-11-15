@@ -13,4 +13,4 @@ DEFAULT_VIEWS = (
 # 注册视图类
 def config_views(app):
     for view, route_base in DEFAULT_VIEWS:
-        view.register(app, route_base=route_base)
+        view.register(app, route_base=route_base, subdomain='www')

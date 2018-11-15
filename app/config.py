@@ -23,6 +23,10 @@ class Config:
     UPLOADED_PHOTOS_DEST = os.path.join(base_dir, 'static/upload')
     # 后台汉化
     BABEL_DEFAULT_LOCALE = 'zh_hans_CN'
+    # 域名配置
+    SERVER_NAME = 'jiege.blog:5000'
+    # 使用本地资源
+    BOOTSTRAP_SERVE_LOCAL = True
 
 
 # 开发环境配置

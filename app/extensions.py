@@ -19,7 +19,7 @@ migrate = Migrate(db=db)
 moment = Moment()
 login_manager = LoginManager()
 photos = UploadSet('photos', IMAGES)
-admin = Admin(name='博客中心', template_mode='bootstrap3')
+admin = Admin(name='博客中心', template_mode='bootstrap3', subdomain='admin', url='')
 babel = Babel()
 
 
