@@ -8,6 +8,10 @@ app = create_app(config_name)
 manager = Manager(app)
 manager.add_command('db', MigrateCommand)
 
+# 后台管理
+from app.admin import config_admin
+config_admin(app)
+
 
 if __name__ == '__main__':
     manager.run()

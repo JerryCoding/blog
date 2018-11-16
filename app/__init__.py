@@ -1,7 +1,7 @@
 from flask import Flask
 from app.config import config
 from app.views import config_views
-from app.extensions import config_extensions, admin
+from app.extensions import config_extensions
 
 
 def create_app(config_name):

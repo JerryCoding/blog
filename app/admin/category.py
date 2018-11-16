@@ -1,7 +1,7 @@
 from flask_admin.contrib.sqlamodel import ModelView
 from flask_admin import form
 from jinja2 import Markup
-from flask import url_for, current_app
+from flask import url_for
 from sqlalchemy.event import listens_for
 from app.models import Category
 import os

@@ -7,7 +7,6 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_uploads import UploadSet, IMAGES
 from flask_uploads import configure_uploads, patch_request_class
-from flask_admin import Admin
 from flask_babelex import Babel
 
 
@@ -19,7 +18,6 @@ migrate = Migrate(db=db)
 moment = Moment()
 login_manager = LoginManager()
 photos = UploadSet('photos', IMAGES)
-admin = Admin(name='博客中心', template_mode='bootstrap3', subdomain='admin', url='')
 babel = Babel()
 
 
@@ -40,11 +38,6 @@ def config_extensions(app):
     # 上传文件初始化
     configure_uploads(app, photos)
     patch_request_class(app, size=None)
-
-    # 后台管理
-    admin.init_app(app)
-    from app.admin import config_admin
-    config_admin(admin)
 
     # 汉化处理
     babel.init_app(app)
